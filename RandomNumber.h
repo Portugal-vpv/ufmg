@@ -5,8 +5,7 @@ using namespace std;
 #define RANDOM_NUMBER_H
 
 class RandomNumber {
-
-
+    public:
+        static int getRandomNumber();
 };
-
 #endif // RANDOM_NUMBER_H
