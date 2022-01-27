@@ -1,5 +1,5 @@
 #include<iostream> 
-#include<string.h>
+#include<string>
 
 using namespace std;
 
@@ -12,10 +12,12 @@ class Pessoa {
         int _idade;
 
     public:
-        Pessoa(string nome, int idade):_nome(nome), _idade(idade){};
-        Pessoa(): _nome(__undefined), _idade(0){};
-        getNome(){return _nome};
-        getIdade(){return _idade};
+        Pessoa(string &nome, int idade):_nome(nome),_idade(idade){ };
+        Pessoa(void):_nome("undefined"), _idade(0){};
+        string getNome(void) {return _nome;}
+        int getIdade(void) {return _idade;}
+        void setNome(string nome) {_nome = nome;}
+        void setIdade(int idade) {_idade = idade;}
 
 };
 

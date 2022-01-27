@@ -1,5 +1,5 @@
 #include<iostream> 
-#include<string.h>
+#include<string>
 
 #include "Pessoa.h"
 using namespace std;
@@ -9,9 +9,12 @@ using namespace std;
 
 class Amigo: public Pessoa {
     private:
-        string dataAniversario;
+        string _dataAniversario;
     
     public:
+        Amigo(void):Pessoa(), _dataAniversario("undefined") {};
+        string getAniversario() {return _dataAniversario;}
+        void setAniversario(string dataAniversario) {_dataAniversario = dataAniversario;}
 
 
 };

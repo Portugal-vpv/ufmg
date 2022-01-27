@@ -11,20 +11,50 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include<ctime>
-#include<cstdlib>
-// #include "Ponto3D.h"
-// #include "Ponto2D.h"
+#include <ctime>
+#include <cstdlib>
+#include <string>
+
 #include "RandomNumber.h"
+#include "Pessoa.h"
+#include "Amigo.h"
+#include "Conhecido.h"
 
 using namespace std;
 
 int main() {
     srand((unsigned int) time (NULL));
+    string test = "Example test";
+    Pessoa A;
+    Amigo B;
+    Conhecido C;
 
-    for(int i = 0; i < 20; i++) {
-        cout<<RandomNumber::getRandomNumber()<<endl;
-    };
+    cout<<A.getIdade()<<endl;
+    cout<<A.getNome()<<endl;
 
+    cout<< B.getNome()<<endl;
+    cout<<B.getIdade()<<endl;
+    cout<<B.getAniversario()<<endl;
+
+    C.setNome("Teste conhecido");
+    C.setEmail("testing@email.com");
+    cout<<C.getNome()<<endl;
+    cout<<C.getIdade()<<endl;
+    cout<<C.getEmail()<<endl;
+
+    cout<<C.getNome()<<endl;
+    cout<<C.getIdade()<<endl;
+    cout<<C.getEmail()<<endl;
+
+    B.setNome("João das Neves");
+    B.setAniversario("Janeiro de 1996");
+    cout<< B.getNome()<<endl;
+    cout<<B.getIdade()<<endl;
+    cout<<B.getAniversario()<<endl;
+
+    // for(int i = 0; i < 20; i++) {
+    //     cout<<RandomNumber::getRandomNumber()<<endl;
+    // };
+    
     return 0;
 }
