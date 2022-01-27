@@ -6,5 +6,5 @@
 
 int RandomNumber::getRandomNumber() {
     int random = (double)rand()/(RAND_MAX)+1 +(rand()%9);
-    return random%2;
+    return random%2 + 1;
 };
