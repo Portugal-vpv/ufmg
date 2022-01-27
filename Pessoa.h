@@ -13,6 +13,9 @@ class Pessoa {
 
     public:
         Pessoa(string nome, int idade):_nome(nome), _idade(idade){};
+        Pessoa(): _nome(__undefined), _idade(0){};
+        getNome(){return _nome};
+        getIdade(){return _idade};
 
 };
 
