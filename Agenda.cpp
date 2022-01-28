@@ -26,6 +26,8 @@ Agenda::Agenda(int pessoas) {
             _conhecidos +=1;
             _p.push_back(new Conhecido);
         }
+
+        cout<<this->getType(typeid(*_p[i]).name())<<endl;
     }
 };
 
@@ -82,4 +84,18 @@ void Agenda::printAgenda() {
         cout << _p[i]->getCustomProperty() <<endl;
         cout <<"*************************************************************"<<endl;
     }
+};
+
+int Agenda::getType(string str) {
+    string amigo = "Amigo", conhecido = "Conhecido";
+
+    if (str.find(amigo) != string::npos) {
+        return 1;
+    }
+    
+    if (str.find(conhecido) != string::npos) {
+        return 2;
+    }
+
+    return 0;
 };
