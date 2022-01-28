@@ -15,12 +15,14 @@ Agenda::Agenda(int pessoas) {
         if (type == 1)
         {   
             Amigo A;
+            _amigos += 1;
             _p.push_back(A);
         }
 
         if (type == 2)
         {   
             Conhecido C;
+            _conhecidos +=1;
             _p.push_back(C);
         }
     }

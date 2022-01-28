@@ -26,7 +26,9 @@ using namespace std;
 
 int main() {
     srand((unsigned int) time (NULL));
-    Agenda agenda(3);
+    Agenda agenda(5);
     agenda.printAgenda();
+    cout << agenda.getAmigos() <<endl;
+    cout << agenda.getConhecidos() <<endl;
     return 0;
 }
