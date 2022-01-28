@@ -26,20 +26,27 @@
 using namespace std;
 
 int main() {
+    // Starta o contador randomico para a classe RandomNumber.
     srand((unsigned int) time (NULL));
+
+    // Permite espaços em branco no input de strings.
     cin >> noskipws;
 
     Agenda agenda(5); // Para variar o tamanho da agenda basta variar o numero instanciado aqui.
     agenda.addInformacoes();
-    cout<<"Numero de amigos"<<endl;
+    cout<<"Numero de amigos"<<endl; 
     cout << agenda.getAmigos() <<endl;
     cout<<"Numero de conhecidos"<<endl;
     cout << agenda.getConhecidos() <<endl;
-    // Para ver a agenda toda basta descomentar.
+
+    // Para ver a agenda toda basta descomentar a linha abaixo.
     //agenda.printAgenda();
 
+    // Printa os aniversários.
     cout<<"*************************ANIVERSARIOS**********************"<<endl;
     agenda.imprimeAniversarios();
+
+    // Printa os emails.
     cout << "********************EMAILS********************"<<endl;
     agenda.imprimeEmails();
     return 0;

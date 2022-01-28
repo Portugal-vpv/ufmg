@@ -9,7 +9,11 @@
 #include "Pessoa.h"
 
 using namespace std;
-
+/*
+*   Recebe um construtor com um número inteiro de contatos, e 
+*   a partir de um gerador aleatório decide entre 1 e 2 se será
+*   salvo um amigo ou um conhecido.
+*/
 Agenda::Agenda(int pessoas) {
     for (int i = 0; i < pessoas; i++) {
         int type = RandomNumber::getRandomNumber();
@@ -27,6 +31,12 @@ Agenda::Agenda(int pessoas) {
     }
 };
 
+/*
+* Itera sobre a agenda recolhendo dados de nome e idade; 
+* Recebe data de aniversário se amigo, e email se conhecida.
+* Utiliza a função auxiliar getType definida abaixo para discernir
+* Entre amigo e conhecido.
+*/
 void Agenda::addInformacoes() {
     for (int i = 0; i <  _p.size(); i++) {
         string nome, idade;
@@ -53,6 +63,10 @@ void Agenda::addInformacoes() {
     }
 }
 
+/*
+* Itera sobre a agenta checando o tipo de Pessoa através da função 
+* Auxiliar getType definida abaixo.
+*/
 void Agenda::imprimeAniversarios() {
     int size = _amigos + _conhecidos;
     for (int i = 0; i < size; i++) {
@@ -62,6 +76,10 @@ void Agenda::imprimeAniversarios() {
     }
 }
 
+/*
+* Itera sobre a agenta checando o tipo de Pessoa através da função 
+* Auxiliar getType definida abaixo.
+*/
 void Agenda::imprimeEmails() {
     int size = _amigos + _conhecidos;
     for (int i = 0; i < size; i++) {
@@ -71,6 +89,9 @@ void Agenda::imprimeEmails() {
     }
 }
 
+/*
+* Printa toda agenda.
+*/
 void Agenda::printAgenda() {
     int size = _amigos + _conhecidos;
     for (int i = 0; i < size; i++) {
@@ -82,6 +103,11 @@ void Agenda::printAgenda() {
     }
 };
 
+/*
+* Checa se a string recebida inclui "Amigo" ou "Conhecido".
+* O parâmetro typeid(*_p[i]).name() foi utilizado como parâmetro
+* para checar o typo da classe.
+*/
 int Agenda::getType(string str) {
     string amigo = "Amigo", conhecido = "Conhecido";
 
