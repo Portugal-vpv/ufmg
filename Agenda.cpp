@@ -32,25 +32,24 @@ Agenda::Agenda(int pessoas) {
 
 void Agenda::addInformacoes() {
     for (int i = 0; i <  _p.size(); i++) {
-        string nome;
-        int idade;
+        string nome, idade;
 
         cout << "Nome: "<< i <<endl;
-        cin >> nome;
+        getline(cin, nome);
         cout << "Idade: "<< i << endl;
-        cin >> idade;
+        getline(cin, idade);
         _p[i].setNome(nome);
-        _p[i].setIdade(idade);
+        _p[i].setIdade(stoi(idade));
 
         if (_types[i] == 1) {
             string aniversario;
             cout << "Data aniversário: " << endl;
-            cin >> aniversario;
+            getline(cin, aniversario);
             _p[i].setCustomProperty(aniversario);
         } else {
             string email;
             cout << "Email" << endl;
-            cin >> email;
+            getline(cin, email);
             _p[i].setCustomProperty(email);
         }
         cout <<endl;
