@@ -15,7 +15,7 @@ class Agenda {
 
     public:
         Agenda(int pessoas);
-        // void addInformações();
+        void addInformacoes();
         // void imprimeAniversarios();
         // void imprimeEmails();
         void printAgenda();

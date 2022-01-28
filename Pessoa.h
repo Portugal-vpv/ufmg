@@ -18,7 +18,8 @@ class Pessoa {
         int getIdade(void) {return _idade;}
         void setNome(string nome) {_nome = nome;}
         void setIdade(int idade) {_idade = idade;}
-
+        virtual void setCustomProperty(string data);
+        virtual string getCustomProperty(void);
 };
 
 #endif // PESSOA_H

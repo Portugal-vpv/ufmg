@@ -14,8 +14,8 @@ class Conhecido: public Pessoa {
         Conhecido(void):Pessoa(), _email("undefined") {};
         void setEmail(string email) {_email = email;}
         string getEmail(void) {return _email;}
-        
-
+        void setCustomProperty(string data) {this->setEmail(data);} 
+        string getCustomProperty(void) { this->getEmail(); }     
 };
 
 #endif // CONHECIDO_H

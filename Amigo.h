@@ -15,6 +15,8 @@ class Amigo: public Pessoa {
         Amigo(void):Pessoa(), _dataAniversario("undefined") {};
         string getAniversario() {return _dataAniversario;}
         void setAniversario(string dataAniversario) {_dataAniversario = dataAniversario;}
+        void setCustomProperty(string data) {this->setAniversario(data);}
+        string getCustomProperty(void) { return this->getAniversario(); }
 
 
 };
