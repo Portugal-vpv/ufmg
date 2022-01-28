@@ -4,7 +4,7 @@
 
 /**
  * Para rodar os testes do execício 1 basta rodar o comando
- * g++ victor_portugal.cpp Conhecido.cpp Pessoa.cpp Amigo.cpp RandomNumber.cpp
+ * g++ victor_portugal.cpp Conhecido.cpp Pessoa.cpp Amigo.cpp RandomNumber.cpp Agenda.cpp
  * no terminal ubuntu. Um arquivo a.out será gerado e basta executá-lo com ./a.out
  * **/
 
@@ -27,6 +27,6 @@ using namespace std;
 int main() {
     srand((unsigned int) time (NULL));
     Agenda agenda(3);
-    agenda.print();
+    agenda.printAgenda();
     return 0;
 }

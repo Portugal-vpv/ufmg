@@ -12,12 +12,13 @@ class Agenda {
         vector<Pessoa> _p;
         int _amigos;
         int _conhecidos;
+
     public:
         Agenda(int pessoas);
         // void addInformações();
         // void imprimeAniversarios();
         // void imprimeEmails();
-        void print();
+        void printAgenda();
 
 };
 

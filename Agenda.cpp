@@ -5,25 +5,31 @@
 #include "Agenda.h"
 #include "Amigo.h"
 #include "Conhecido.h"
+#include "Pessoa.h"
 
 using namespace std;
 
 Agenda::Agenda(int pessoas) {
-    for (int i =0; i < pessoas; i++) {
+    for (int i = 0; i < pessoas; i++) {
         int type = RandomNumber::getRandomNumber();
-        if (type == 1) {
-            _p.push_back(Amigo A);
+        if (type == 1)
+        {   
+            Amigo A;
+            _p.push_back(A);
         }
 
-        if (type == 2) {
-            _p.push_back(Conhecido C);
+        if (type == 2)
+        {   
+            Conhecido C;
+            _p.push_back(C);
         }
     }
 };
 
-void Agenda::print() {
+void Agenda::printAgenda() {
     int length = _p.capacity();
     for (int i = 0; i < length; i++) {
-        cout<<_p.pop_back().getName()<<endl;
+        Pessoa p = _p[i];
+        cout << p.getNome() << endl;
     }
 }
