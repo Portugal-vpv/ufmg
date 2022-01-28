@@ -19,7 +19,10 @@ class Pessoa {
         int getIdade(void) {return _idade;}
         void setNome(string nome) {_nome = nome;}
         void setIdade(int idade) {_idade = idade;}
-        virtual void setCustomProperty(string data);
+
+        // Foram definidas propriedade custom  virtuais na classe pai
+        // para as classes filhas pudessem ter acesso pelo polimorfismo.
+        virtual void setCustomProperty(string data); 
         virtual string getCustomProperty(void);
 };
 

@@ -16,6 +16,8 @@ class Amigo: public Pessoa {
         ~Amigo() {};
         string getAniversario() {return _dataAniversario;}
         void setAniversario(string dataAniversario) {_dataAniversario = dataAniversario;}
+
+        // Implementações dos métodos polimorficos da classe pai.
         void setCustomProperty(string data) {this->setAniversario(data);}
         string getCustomProperty(void) { return this->getAniversario(); }
 

@@ -15,6 +15,8 @@ class Conhecido: public Pessoa {
         ~Conhecido() {};
         void setEmail(string email) {_email = email;}
         string getEmail(void) {return _email;}
+
+        // Implementações dos métodos polimorficos da classe pai.
         void setCustomProperty(string data) {this->setEmail(data);} 
         string getCustomProperty(void) { return this->getEmail(); }     
 };
