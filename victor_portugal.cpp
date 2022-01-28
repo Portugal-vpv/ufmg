@@ -29,16 +29,17 @@ int main() {
     srand((unsigned int) time (NULL));
     cin >> noskipws;
 
-    Agenda agenda(3); // Para variar o tamanho da agenda basta variar o numero instanciado aqui.
+    Agenda agenda(2); // Para variar o tamanho da agenda basta variar o numero instanciado aqui.
     agenda.addInformacoes();
     cout<<"Numero de amigos"<<endl;
     cout << agenda.getAmigos() <<endl;
     cout<<"Numero de conhecidos"<<endl;
     cout << agenda.getConhecidos() <<endl;
     // Para ver a agenda toda basta descomentar.
-    agenda.printAgenda();
-    // cout<<"*************************ANIVERSARIOS**********************"<<endl;
-    // agenda.imprimeAniversarios();
+    //agenda.printAgenda();
+
+    cout<<"*************************ANIVERSARIOS**********************"<<endl;
+    agenda.imprimeAniversarios();
     cout << "********************EMAILS********************"<<endl;
     agenda.imprimeEmails();
     return 0;

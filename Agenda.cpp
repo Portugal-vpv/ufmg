@@ -15,18 +15,17 @@ Agenda::Agenda(int pessoas) {
         int type = RandomNumber::getRandomNumber();
         if (type == 1)
         {   
-            Amigo A;
+            // Amigo A;
             _amigos += 1;
-            _p.push_back(A);
+            _p.push_back(new Amigo);
         }
 
         if (type == 2)
         {   
-            Conhecido C;
+            // Conhecido C;
             _conhecidos +=1;
-            _p.push_back(C);
+            _p.push_back(new Conhecido);
         }
-         _types.push_back(type);
     }
 };
 
@@ -38,30 +37,29 @@ void Agenda::addInformacoes() {
         getline(cin, nome);
         cout << "Idade: "<< i << endl;
         getline(cin, idade);
-        _p[i].setNome(nome);
-        _p[i].setIdade(stoi(idade));
+        _p[i]->setNome(nome);
+        _p[i]->setIdade(stoi(idade));
 
-        if (_types[i] == 1) {
+        if (/*_types[i] == 1*/ true) {
             string aniversario;
             cout << "Data aniversário: " << endl;
             getline(cin, aniversario);
-            _p[i].setCustomProperty(aniversario);
+            _p[i]->setCustomProperty(aniversario);
         } else {
             string email;
             cout << "Email" << endl;
             getline(cin, email);
-            _p[i].setCustomProperty(email);
+            _p[i]->setCustomProperty(email);
         }
         cout <<endl;
-        cout << _types[i] <<endl;
     }
 }
 
 void Agenda::imprimeAniversarios() {
     int size = _amigos + _conhecidos;
     for (int i = 0; i < size; i++) {
-        if (_types[i] == 1) {
-             cout << _p[i].getCustomProperty() <<endl;
+        if (typeid(*_p[i]).name() == "Amigo") {
+             cout << _p[i]->getCustomProperty() <<endl;
         }
     }
 }
@@ -69,8 +67,8 @@ void Agenda::imprimeAniversarios() {
 void Agenda::imprimeEmails() {
     int size = _amigos + _conhecidos;
     for (int i = 0; i < size; i++) {
-        if (_types[i] == 2) {
-             cout << _p[i].getCustomProperty() <<endl;
+        if (typeid(*_p[i]).name() == "Conhecido") {
+             cout << _p[i]->getCustomProperty() <<endl;
         }
     }
 }
@@ -79,9 +77,9 @@ void Agenda::printAgenda() {
     int size = _amigos + _conhecidos;
     for (int i = 0; i < size; i++) {
         cout<<"*************************Contato "<< i << "*******************"<<endl;
-        cout << _p[i].getNome() << endl;
-        cout << _p[i].getIdade() <<endl; 
-        cout << _p[i].getCustomProperty() <<endl;
+        cout << _p[i]->getNome() << endl;
+        cout << _p[i]->getIdade() <<endl; 
+        cout << _p[i]->getCustomProperty() <<endl;
         cout <<"*************************************************************"<<endl;
     }
 };

@@ -9,11 +9,10 @@ using namespace std;
 
 class Agenda {
     private:
-        vector<Pessoa> _p;
+        vector<Pessoa* > _p;
         int _amigos = 0;
         int _conhecidos = 0;
-        vector<int> _types;
-
+        
     public:
         Agenda(int pessoas);
         void addInformacoes();
