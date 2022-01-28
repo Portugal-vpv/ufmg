@@ -26,10 +26,17 @@ using namespace std;
 
 int main() {
     srand((unsigned int) time (NULL));
-    Agenda agenda(3);
-    agenda.printAgenda();
-    cout << agenda.getAmigos() <<endl;
-    cout << agenda.getConhecidos() <<endl;
+    Agenda agenda(3); // Para variar o tamanho da agenda basta variar o numero instanciado aqui.
     agenda.addInformacoes();
+    cout<<"Numero de amigos"<<endl;
+    cout << agenda.getAmigos() <<endl;
+    cout<<"Numero de conhecidos"<<endl;
+    cout << agenda.getConhecidos() <<endl;
+    // Para ver a agenda toda basta descomentar.
+    agenda.printAgenda();
+    cout<<"*************************ANIVERSARIOS**********************"<<endl;
+    agenda.imprimeAniversarios();
+    cout << "********************EMAILS********************"<<endl;
+    agenda.imprimeEmails();
     return 0;
 }

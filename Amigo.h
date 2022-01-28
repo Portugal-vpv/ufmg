@@ -13,6 +13,7 @@ class Amigo: public Pessoa {
     
     public:
         Amigo(void):Pessoa(), _dataAniversario("undefined") {};
+        ~Amigo() {};
         string getAniversario() {return _dataAniversario;}
         void setAniversario(string dataAniversario) {_dataAniversario = dataAniversario;}
         void setCustomProperty(string data) {this->setAniversario(data);}

@@ -12,6 +12,7 @@ class Conhecido: public Pessoa {
         string _email;
     public:
         Conhecido(void):Pessoa(), _email("undefined") {};
+        ~Conhecido() {};
         void setEmail(string email) {_email = email;}
         string getEmail(void) {return _email;}
         void setCustomProperty(string data) {this->setEmail(data);} 

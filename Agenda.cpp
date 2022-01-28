@@ -26,6 +26,7 @@ Agenda::Agenda(int pessoas) {
             _conhecidos +=1;
             _p.push_back(C);
         }
+         _types.push_back(type);
     }
 };
 
@@ -41,7 +42,7 @@ void Agenda::addInformacoes() {
         _p[i].setNome(nome);
         _p[i].setIdade(idade);
 
-        if (typeid(_p[i]).name() == "Amigo") {
+        if (_types[i] == 1) {
             string aniversario;
             cout << "Data aniversário: " << endl;
             cin >> aniversario;
@@ -52,14 +53,36 @@ void Agenda::addInformacoes() {
             cin >> email;
             _p[i].setCustomProperty(email);
         }
+        cout <<endl;
+        cout << _types[i] <<endl;
+    }
+}
+
+void Agenda::imprimeAniversarios() {
+    int size = _amigos + _conhecidos;
+    for (int i = 0; i < size; i++) {
+        if (_types[i] == 1) {
+             cout << _p[i].getCustomProperty() <<endl;
+        }
+    }
+}
+
+void Agenda::imprimeEmails() {
+    int size = _amigos + _conhecidos;
+    for (int i = 0; i < size; i++) {
+        if (_types[i] == 2) {
+             cout << _p[i].getCustomProperty() <<endl;
+        }
     }
 }
 
 void Agenda::printAgenda() {
-    int length = _p.capacity();
-    for (int i = 0; i < length; i++) {
+    int size = _amigos + _conhecidos;
+    for (int i = 0; i < size; i++) {
+        cout<<"*************************Contato "<< i << "*******************"<<endl;
         cout << _p[i].getNome() << endl;
         cout << _p[i].getIdade() <<endl; 
         cout << _p[i].getCustomProperty() <<endl;
+        cout <<"*************************************************************"<<endl;
     }
 };
