@@ -29,7 +29,7 @@ int main() {
     srand((unsigned int) time (NULL));
     cin >> noskipws;
 
-    Agenda agenda(10); // Para variar o tamanho da agenda basta variar o numero instanciado aqui.
+    Agenda agenda(5); // Para variar o tamanho da agenda basta variar o numero instanciado aqui.
     agenda.addInformacoes();
     cout<<"Numero de amigos"<<endl;
     cout << agenda.getAmigos() <<endl;

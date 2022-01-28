@@ -15,19 +15,18 @@ Agenda::Agenda(int pessoas) {
         int type = RandomNumber::getRandomNumber();
         if (type == 1)
         {   
-            // Amigo A;
             _amigos += 1;
             _p.push_back(new Amigo);
         }
 
         if (type == 2)
         {   
-            // Conhecido C;
             _conhecidos +=1;
             _p.push_back(new Conhecido);
         }
 
         cout<<this->getType(typeid(*_p[i]).name())<<endl;
+        cout<<_p[i]->getCustomProperty()<<endl;
     }
 };
 
@@ -42,7 +41,7 @@ void Agenda::addInformacoes() {
         _p[i]->setNome(nome);
         _p[i]->setIdade(stoi(idade));
 
-        if (/*_types[i] == 1*/ true) {
+        if (this->getType(typeid(*_p[i]).name()) == 1) {
             string aniversario;
             cout << "Data aniversário: " << endl;
             getline(cin, aniversario);
@@ -60,7 +59,7 @@ void Agenda::addInformacoes() {
 void Agenda::imprimeAniversarios() {
     int size = _amigos + _conhecidos;
     for (int i = 0; i < size; i++) {
-        if (typeid(*_p[i]).name() == "Amigo") {
+         if (this->getType(typeid(*_p[i]).name()) == 1) {
              cout << _p[i]->getCustomProperty() <<endl;
         }
     }
@@ -69,7 +68,7 @@ void Agenda::imprimeAniversarios() {
 void Agenda::imprimeEmails() {
     int size = _amigos + _conhecidos;
     for (int i = 0; i < size; i++) {
-        if (typeid(*_p[i]).name() == "Conhecido") {
+        if (this->getType(typeid(*_p[i]).name()) == 2) {
              cout << _p[i]->getCustomProperty() <<endl;
         }
     }
