@@ -24,9 +24,6 @@ Agenda::Agenda(int pessoas) {
             _conhecidos +=1;
             _p.push_back(new Conhecido);
         }
-
-        cout<<this->getType(typeid(*_p[i]).name())<<endl;
-        cout<<_p[i]->getCustomProperty()<<endl;
     }
 };
 
@@ -34,9 +31,9 @@ void Agenda::addInformacoes() {
     for (int i = 0; i <  _p.size(); i++) {
         string nome, idade;
 
-        cout << "Nome: "<< i <<endl;
+        cout << "Nome: " <<endl;
         getline(cin, nome);
-        cout << "Idade: "<< i << endl;
+        cout << "Idade: "<< endl;
         getline(cin, idade);
         _p[i]->setNome(nome);
         _p[i]->setIdade(stoi(idade));
