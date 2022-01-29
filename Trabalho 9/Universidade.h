@@ -15,6 +15,7 @@ class Universidade {
         Universidade(){};
         void addProfessor(Professor * p);
         double getTotalPago(void);
+        void listProfessors(void);
         ~Universidade(){};
 };
 #endif

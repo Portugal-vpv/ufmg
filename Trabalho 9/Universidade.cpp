@@ -18,3 +18,11 @@ double Universidade::getTotalPago(void) {
 
     return salary;
 };
+
+void Universidade::listProfessors() {
+      for (int i = 0; i < _professors.size(); i++) {
+        cout<<"Nome: "<<_professors[i]->getName()<<endl;
+        cout<<"Salário: "<< _professors[i]->getSalario()<<endl;
+        cout<<endl;
+    }
+}

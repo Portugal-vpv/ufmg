@@ -39,7 +39,11 @@ int main() {
     uni.addProfessor(new ProfIntegral(name_2, salarioMensal_2));
     uni.addProfessor(new ProfIntegral(name_3, salarioMensal_3));
 
-    uni.getTotalPago();
+    cout<<"**************************Listagem dos Professores:***********"<<endl;
+    uni.listProfessors();
+
+    cout << "************************Valor Total Pago********************"<<endl;
+    cout<<uni.getTotalPago()<<endl;
            
     
     return 0;
