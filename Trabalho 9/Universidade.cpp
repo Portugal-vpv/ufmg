@@ -10,11 +10,11 @@ void Universidade::addProfessor(Professor *p) {
 };
 
 double Universidade::getTotalPago(void) {
-    if (_professors.size() < 1) {
-        return 0;
-    }
-    
+     double salary = 0;   
+
     for (int i = 0; i < _professors.size(); i++) {
-        cout << _professors[i]->getSalario();
+        salary += _professors[i]->getSalario();
     }
+
+    return salary;
 };

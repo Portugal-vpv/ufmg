@@ -33,11 +33,13 @@ int main() {
            salarioMensal_3 = 22357.85;
     
     Universidade uni;
-    ProfHorista profHorista_0(name_0, nHorasTrabalhadas_0, valorHora_0),
-                profHorista_1(name_1, nHorasTrabalhadas_1, valorHora_1);
     
-    ProfIntegral profIntegral_2(name_2, salarioMensal_2), 
-                 profIntegral_3(name_3, salarioMensal_3);
+    uni.addProfessor(new ProfHorista(name_0, nHorasTrabalhadas_0, valorHora_0));
+    uni.addProfessor(new ProfHorista(name_1, nHorasTrabalhadas_1, valorHora_1));
+    uni.addProfessor(new ProfIntegral(name_2, salarioMensal_2));
+    uni.addProfessor(new ProfIntegral(name_3, salarioMensal_3));
+
+    uni.getTotalPago();
            
     
     return 0;
