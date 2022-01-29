@@ -12,7 +12,7 @@
 using namespace std;
 
 int main() {
-    cout <<"It's working"<<endl;
+    cout <<"It's working!"<<endl;
 
     return 0;
 }
