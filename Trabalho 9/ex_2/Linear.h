@@ -7,7 +7,7 @@ class Linear: public Funcao {
     private:
         int _a, _b;
     public:
-        Linear(int a, int b):Funcao(a),_a(a), _b(b) {};
+        Linear(int input, int a, int b):Funcao(input),_a(a), _b(b) {};
         ~Linear(){};
         double getIntegral();
 };
