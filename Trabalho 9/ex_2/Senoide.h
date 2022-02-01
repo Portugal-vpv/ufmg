@@ -6,6 +6,6 @@
         public:
             Senoide(int input): Funcao(input) {};
             ~Senoide(){};
-            double getIntegral();
+            double getIntegral(int p0, int pn, int intervalo);
     };
 #endif //SENOIDAL_H

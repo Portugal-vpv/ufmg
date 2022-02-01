@@ -9,6 +9,6 @@ class Linear: public Funcao {
     public:
         Linear(int input, int a, int b):Funcao(input),_a(a), _b(b) {};
         ~Linear(){};
-        double getIntegral();
+        double getIntegral(int p0, int pn, int intervalo);
 };
 #endif //LINEAR_H

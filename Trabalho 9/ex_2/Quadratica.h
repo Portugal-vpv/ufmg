@@ -9,7 +9,7 @@
         public:
             Quadratica(int input, int a, int b, int c): Funcao(input), _a(a), _b(b), _c(c) {};
             ~Quadratica(){};
-            double getIntegral();
+            double getIntegral(int p0, int pn, int intervalo);
 
     };
 #endif
