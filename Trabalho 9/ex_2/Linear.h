@@ -10,6 +10,7 @@ class Linear: public Funcao {
         Linear(int input, int a, int b):Funcao(input),_a(a), _b(b) {};
         ~Linear(){};
         double getIntegral(int p0, int pn, int intervalo);
+        double getLinearPoint(double x);
 
         //Basic Setters;
         int getA() { return _a; };
