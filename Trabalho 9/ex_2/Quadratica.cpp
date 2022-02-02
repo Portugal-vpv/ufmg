@@ -19,8 +19,6 @@ double Quadratica::getIntegral(double p0, double pn, double intervalo) {
     double x = p0 + h;
     double soma = 0.0;
 
-    cout<<h <<endl;
-
     for (int i = 0; i < intervalo; i++) {
         soma += this->getQuadraticaPoint(x);
         x += h;
