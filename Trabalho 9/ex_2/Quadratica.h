@@ -10,6 +10,11 @@
             Quadratica(double a, double b, double c):  _a(a), _b(b), _c(c) {};
             ~Quadratica(){};
             double getIntegral(double p0, double pn, double intervalo);
+            double getQuadraticaPoint(double x);
 
+            // Basic getters.
+            double getA() { return _a; };
+            double getB() { return _b; };
+            double getC() { return _c; };
     };
 #endif
