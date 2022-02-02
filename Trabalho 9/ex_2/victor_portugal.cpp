@@ -30,10 +30,9 @@ int main() {
     c = new Senoide();
     cout << c->getIntegral(0, 6.28, 5) << endl;
 
-    // delete(a);
-    // delete(b);
-    // delete(c);
-
-    cout << "WTF" <<endl;
+    delete(a);
+    delete(b);
+    delete(c);
+    
     return 0;
 }
