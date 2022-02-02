@@ -2,11 +2,9 @@
 #define FUNCAO_H
 
 class Funcao {
-    private:
-        int _n;
     public:
-        Funcao(int input): _n(input){};
+        Funcao(){};
         ~Funcao(){};
-        virtual double getIntegral(double input) = 0;
+        virtual double getIntegral(double p0, double pn, double intervalo) = 0;
 };
 #endif
