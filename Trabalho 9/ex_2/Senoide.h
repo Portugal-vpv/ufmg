@@ -4,8 +4,8 @@
 #define SENOIDAL_H
     class Senoide: public Funcao {
         public:
-            Senoide(int input): Funcao(input) {};
+            Senoide() {};
             ~Senoide(){};
-            double getIntegral(int p0, int pn, int intervalo);
+            double getIntegral(double p0, double pn, double intervalo);
     };
 #endif //SENOIDAL_H
