@@ -7,5 +7,6 @@
             Senoide() {};
             ~Senoide(){};
             double getIntegral(double p0, double pn, double intervalo);
+            double getSenoidePoint(double x);
     };
 #endif //SENOIDAL_H
