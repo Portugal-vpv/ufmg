@@ -6,15 +6,21 @@
 using namespace std;
 
 double Senoide::getSenoidePoint(double x) {
-    cout<< sin(x)/x <<endl;
     return sin(x)/x;
 }
 
 double Senoide::getIntegral(double p0, double pn, double intervalo) {
-       if (intervalo <= 0) {
+    if (intervalo <= 0) {
         cout<<"Intervalo não pode ser 0."<<endl;
         return 0;
     }
+
+    if (p0 == 0) {
+        cout<<"Não é possível efetuar divisão por zero."<<endl;
+        return 0;
+    }
+
+
 
     double h = (pn - p0)/intervalo;
     double x = p0 + h;

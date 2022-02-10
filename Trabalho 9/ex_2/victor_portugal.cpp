@@ -5,6 +5,7 @@
 /**
  * Para rodar os testes do execício 2 basta rodar o comando
  * g++ victor_portugal.cpp Linear.cpp Quadratica.cpp Senoide.cpp
+ * neste diretório.
  * **/
 
 #include <iostream>
@@ -28,7 +29,7 @@ int main() {
 
     Funcao *c;
     c = new Senoide();
-    cout << c->getIntegral(0, 6.28, 5) << endl;
+    cout << c->getIntegral(0.1, 3.14, 5) << endl;
 
     delete(a);
     delete(b);
