@@ -5,6 +5,7 @@
 /**
  * Para rodar os testes do execício 1 basta rodar o comando
  * g++ victor_portugal.cpp Professor.cpp ProfHorista.cpp ProfIntegral.cpp Universidade.cpp
+ * neste diretório.
  * **/
 
 #include <iostream>
